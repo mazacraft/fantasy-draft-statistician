@@ -39,13 +39,17 @@ Draft state saves to `localStorage`, so a refresh mid-draft won't lose your boar
 
 ## Testing
 
-```
+Requires [Node.js](https://nodejs.org/). Clone the repo and run:
+
+```bash
+git clone https://github.com/mazacraft/fantasy-draft-statistician.git
+cd fantasy-draft-statistician
 node scripts/smoke-test.js
 ```
 
-No dependencies. The test extracts the script block from `index.html`, runs it against
-a stubbed DOM, and asserts on the pure logic: data integrity across all players, the
-snake pick schedule for seat 12, the PPR adjustment table, and engine behavior
+No other dependencies. The test extracts the script block from `index.html`, runs it
+against a stubbed DOM, and asserts on the pure logic: data integrity across all players,
+the snake pick schedule for seat 12, the PPR adjustment table, and engine behavior
 (availability, no kicker in round one, no stacking a second quarterback).
 
 ## Adapting it to your league
